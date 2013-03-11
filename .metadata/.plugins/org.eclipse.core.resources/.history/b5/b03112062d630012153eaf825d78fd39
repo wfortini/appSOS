@@ -1,0 +1,37 @@
+package br.com.sos24horas.tcc;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.IntentFilter;
+import android.view.Menu;
+
+public class MainActivity extends Activity {
+
+private static final String PROJETO_ID = "994547673653";
+	
+	private static final String TAG = "GCMCliente";
+	
+	private String regId = "";
+	
+	private String statusRegistro = "Não registrado";
+	private String broadcastMessage = "Não há mensagem";
+	
+	IntentFilter gcmFilter;
+	
+	private String regStatusResult = "";
+	private String broadcastMessageResult = "";
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.activity_main, menu);
+		return true;
+	}
+
+}

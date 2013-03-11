@@ -1,0 +1,68 @@
+package br.com.sos24horas.tcc.gcm;
+
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+
+import com.google.android.gcm.GCMBaseIntentService;
+
+/**
+ * Encapsua chamadas GCM recebemdo as messages enviadas ao dispositivo atraves do onMessage()
+ * mesmo o aplicativo estando fechado
+ * @author wellington
+ *
+ */
+public class GCMIntentService extends GCMBaseIntentService{
+	
+    private static final String PROJETO_ID = "994547673653";
+
+   private static final String TAG = "GCMIntentService";
+
+	
+	public GCMIntentService() {
+		super(PROJETO_ID);
+		Log.d(TAG, "GCMIntentService init");
+		
+	}
+	
+	
+	
+	@Override
+	protected void onError(Context arg0, String arg1) {
+		// TODO Auto-generated method stub
+		Log.d(TAG, "Error: " + arg1);
+		
+	}
+	
+	@Override
+	protected void onMessage(Context arg0, Intent arg1) {
+		// TODO Auto-generated method stub
+		Log.d(TAG, "Message Receiver");
+		String message = arg1.getStringExtra("message");
+		sendGCMIntent(arg0, message);
+		
+	}
+	
+	private void sendGCMIntent(Context ctx, String message){
+		
+		Intent broadcastIntent = new Intent();
+		broadcastIntent.setAction("GCM_RECEIVED_ACTION");
+		
+		broadcastIntent.putExtra("gcm", message);
+		ctx.sendBroadcast(broadcastIntent);
+	}
+	
+	@Override
+	protected void onRegistered(Context arg0, String arg1) {
+		// TODO Auto-generated method stub
+		Log.d(TAG, arg1);
+		
+	}
+	@Override
+	protected void onUnregistered(Context arg0, String arg1) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+}

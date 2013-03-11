@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;br.com.sos24horas.tcc.common.exception&apos; to &apos;br.com.sos24horas.tcc.domain.common.exception&apos;&#x0A;- Original project: &apos;appDomain&apos;&#x0A;- Original element: &apos;appDomain/src/br.com.sos24horas.tcc.common.exception&apos;&#x0A;- Renamed element: &apos;appDomain/src/br.com.sos24horas.tcc.domain.common.exception&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;br.com.sos24horas.tcc.common.exception&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;br.com.sos24horas.tcc.common.exception" name="br.com.sos24horas.tcc.domain.common.exception" qualified="false" references="true" stamp="1358037019315" textual="false" version="1.0"/>
+</session>

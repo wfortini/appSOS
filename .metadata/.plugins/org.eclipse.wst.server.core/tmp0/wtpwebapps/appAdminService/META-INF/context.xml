@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadable="true">
+   <Resource name="jdbc/ds-ass24horas-mysql"
+      auth="Container"
+      type="javax.sql.DataSource"
+      maxActive="100"
+      maxIdle="30"
+      maxWait="1000"
+      username="root"
+      password="adminadmin"
+      driverClassName="com.mysql.jdbc.Driver"
+      url="jdbc:mysql://localhost:3306/sos24horas?autoReconnect=true" />
+</Context>

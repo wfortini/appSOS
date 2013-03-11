@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;appMobileClient/src/br.com.sos24horas.tcc.gcm&apos;&#x0A;- Original project: &apos;appMobileService&apos;&#x0A;- Destination element: &apos;appMobileClient/src/br.com.sos24horas.tcc.gcm&apos;&#x0A;- Original elements:&#x0A;     br.com.sos24horas.tcc.gcm.client.GCMCliente.java&#x0A;     br.com.sos24horas.tcc.gcm.client.GCMIntentService.java&#x0A;- Update references to refactored element" description="Move compilation units" destination="=appMobileClient/src&lt;br.com.sos24horas.tcc.gcm" element1="/src&lt;br.com.sos24horas.tcc.gcm.client{GCMCliente.java" element2="/src&lt;br.com.sos24horas.tcc.gcm.client{GCMIntentService.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1358471424370" units="2" version="1.0"/>
+</session>

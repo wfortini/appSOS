@@ -1,0 +1,6 @@
+INDEX VERSION 1.122+/home/wellington/workspaces/appSOS/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+923758203.index
+186506086.index
+3829381913.index
+2303902490.index
+2097811972.index

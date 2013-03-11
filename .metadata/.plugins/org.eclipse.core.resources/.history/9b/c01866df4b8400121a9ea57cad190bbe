@@ -1,0 +1,21 @@
+package br.com.sos24horas.appclient.service.map;
+
+import com.google.android.maps.MapActivity;
+
+public class Mapa extends MapActivity{
+	
+	private static final String = "MAPA";
+	
+	
+	
+	@Override
+	protected boolean isRouteDisplayed() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
+	
+	
+
+}

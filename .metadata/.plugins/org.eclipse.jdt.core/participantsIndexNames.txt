@@ -1,0 +1,3 @@
+INDEX VERSION 1.126
+/home/wellington/workspaces/appSOS/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1335465579.index
+/appAdminService/src

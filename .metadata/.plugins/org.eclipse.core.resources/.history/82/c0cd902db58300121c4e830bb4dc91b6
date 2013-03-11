@@ -1,0 +1,37 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+    
+    <TableRow >
+        <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/button_sos" />
+        
+    </TableRow>
+    
+    <TableRow >
+        
+        
+        
+    </TableRow>
+		<RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:gravity="bottom">
+		
+		    <ImageButton android:id="@+id/salvar"
+        			android:layout_width="fill_parent"
+        			android:layout_height="wrap_content"
+        			android:text="Salvar"
+        			android:src="@drawable/ic_launcher"/>
+		
+		    
+		
+		</RelativeLayout>
+</TableLayout> 

@@ -1,0 +1,125 @@
+package br.com.sos24horas.tcc;
+
+import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+import com.google.android.gcm.GCMRegistrar;
+
+public class MainActivity extends Activity {
+
+private static final String PROJETO_ID = "994547673653";
+	
+	
+	
+	/**
+	 * Classe anónima sobrescrevendo o método onReceiver
+	 */
+   private final BroadcastReceiver mHandleMessageReceiver =
+           new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+              String newMessage = intent.getExtras().getString(EXTRA_MESSAGE);
+              
+        }
+   };
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		
+	        GCMRegistrar.checkDevice(this);
+	        // Make sure the manifest was properly set - comment out this line
+	        // while developing the app, then uncomment it when it's ready.
+	        GCMRegistrar.checkManifest(this);
+	        setContentView(R.layout.main);
+	       
+	        registerReceiver(mHandleMessageReceiver,
+	                new IntentFilter(DISPLAY_MESSAGE_ACTION));
+	        final String regId = GCMRegistrar.getRegistrationId(this);
+		
+		
+		
+		
+		
+
+		Button b = (Button) findViewById(R.id.button1);
+		b.setOnClickListener(listener);
+		
+
+		gcmFilter = new IntentFilter();
+		gcmFilter.addAction("GCM_RECEIVED_ACTION");
+		
+		this.registrarCliente(this);
+		
+		
+	}
+	
+    private OnClickListener listener = new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			
+			
+		}
+	};
+	
+	/**
+	 * Registra o dispositivo no Google GCM
+	 * @param context
+	 */
+	public void registrarCliente(Context context){
+		
+		try {
+			
+			GCMRegistrar.checkDevice(context);
+			
+			GCMRegistrar.checkManifest(context);
+			
+			regId = GCMRegistrar.getRegistrationId(context);
+			
+			
+			if(regId.equals("")){
+				
+				statusRegistro = "Registrando...";
+				GCMRegistrar.register(context, PROJETO_ID);
+				regId = GCMRegistrar.getRegistrationId(context);
+				statusRegistro = "Registro adquirido";
+				Log.d(TAG, "Já registrado com id:" + regId);
+				
+			}else{
+				statusRegistro = "Atualmente registrado";
+				Log.d(TAG, "Já registrado com id:" + regId);
+			}			
+			
+		} catch (Exception e) {
+			Log.e(TAG, e.getMessage());
+			statusRegistro = "Erro registrando dispositivo";
+			//TODO: lança uma exception aqui caso registro não ocorra
+		}
+		
+		Log.d(TAG, statusRegistro);
+		Log.d(TAG, regId);	
+		
+		
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.activity_main, menu);
+		return true;
+	}
+
+}

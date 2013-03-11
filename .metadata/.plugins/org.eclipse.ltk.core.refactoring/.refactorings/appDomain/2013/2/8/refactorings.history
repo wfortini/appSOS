@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Solicitacao.java&apos; to &apos;appAdminService/src/br.com.sos24horas.tcc.common.domain&apos;&#x0A;- Original project: &apos;appDomain&apos;&#x0A;- Destination element: &apos;appAdminService/src/br.com.sos24horas.tcc.common.domain&apos;&#x0A;- Original element: &apos;br.com.sos24horas.tcc.domain.solicitacao.Solicitacao.java&apos;" description="Copy compilation unit" destination="=appAdminService/src&lt;br.com.sos24horas.tcc.common.domain" element1="/src&lt;br.com.sos24horas.tcc.domain.solicitacao{Solicitacao.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1361738037645" units="1" version="1.0"/>
+</session>

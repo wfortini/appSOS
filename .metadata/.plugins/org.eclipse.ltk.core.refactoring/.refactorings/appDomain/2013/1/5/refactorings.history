@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;br.com.sos24horas.tcc.solicitacao.domain&apos; to &apos;br.com.sos24horas.tcc.domain.solicitacao&apos;&#x0A;- Original project: &apos;appDomain&apos;&#x0A;- Original element: &apos;appDomain/src/br.com.sos24horas.tcc.solicitacao.domain&apos;&#x0A;- Renamed element: &apos;appDomain/src/br.com.sos24horas.tcc.domain.solicitacao&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;br.com.sos24horas.tcc.solicitacao.domain&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;br.com.sos24horas.tcc.solicitacao.domain" name="br.com.sos24horas.tcc.domain.solicitacao" qualified="false" references="true" stamp="1359501304204" textual="false" version="1.0"/>
+</session>

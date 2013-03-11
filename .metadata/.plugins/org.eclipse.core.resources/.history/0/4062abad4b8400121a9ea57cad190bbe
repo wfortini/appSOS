@@ -1,0 +1,7 @@
+package br.com.sos24horas.appclient.service.map;
+
+import com.google.android.maps.MapActivity;
+
+public class Mapa extends MapActivity{
+
+}

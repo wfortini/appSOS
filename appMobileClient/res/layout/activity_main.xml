@@ -1,0 +1,32 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1"
+    tools:context=".MainActivity" >
+    
+    <TableRow >
+        <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/button_sos"
+        android:drawableLeft="@drawable/ic_launcher" />
+        
+    </TableRow>
+   
+  	<RelativeLayout
+		    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:gravity="bottom">
+		
+		    <Button android:id="@+id/btnSuaLocal"
+        			android:layout_width="fill_parent"
+        			android:layout_height="wrap_content"
+        			android:text="@string/btn_sua_local"
+        			android:drawableLeft="@drawable/ic_launcher"/> 
+		
+		</RelativeLayout>
+</TableLayout> 

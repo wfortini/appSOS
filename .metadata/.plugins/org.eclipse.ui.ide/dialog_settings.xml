@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="false" key="ShowDerived"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode path=&quot;/appDomain/src/br/com/sos24horas/tcc/domain/solicitacao/Solicitacao.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/appMobileClient/bin/AndroidManifest.xml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/appAdminService/src/br/com/sos24horas/tcc/gcm/GCMBroadcast.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/appAdminService/WebContent/WEB-INF/web.xml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/appMobileClient/src/br/com/sos24horas/appclient/service/localizacao/Localizacao.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/appMobileClient/src/br/com/sos24horas/tcc/controller/MainActivity.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/appMobileClient/res/layout/mapview.xml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/appMobileClient/src/br/com/sos24horas/appclient/service/map/Mapa.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/appMobileClient/src/br/com/sos24horas/tcc/http/ServicoWeb.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/appMobileClient/src/br/com/sos24horas/service/http/client/WebService.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/appAdminService/src/br/com/sos24horas/tcc/solicitacao/controller/SolicitacaoServlet.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="604" key="DIALOG_WIDTH"/>
+			<item value="54" key="DIALOG_Y_ORIGIN"/>
+			<item value="502" key="DIALOG_HEIGHT"/>
+			<item value="384" key="DIALOG_X_ORIGIN"/>
+			<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		</section>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item value="613" key="DIALOG_WIDTH"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="0" key="DIALOG_X_ORIGIN"/>
+		<item value="598" key="DIALOG_HEIGHT"/>
+		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="NewWizardAction">
+		<item value="com.android.ide.eclipse.adt.project.NewProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="com.android.ide.eclipse.wizards.category"/>
+		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item value="565" key="DIALOG_WIDTH"/>
+		<item value="152" key="DIALOG_Y_ORIGIN"/>
+		<item value="388" key="DIALOG_HEIGHT"/>
+		<item value="402" key="DIALOG_X_ORIGIN"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+	</section>
+</section>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;appMobileClient/src/br.com.sos24horas.tcc.common.exception&apos;&#x0A;- Original project: &apos;appAdminService&apos;&#x0A;- Destination element: &apos;appMobileClient/src/br.com.sos24horas.tcc.common.exception&apos;&#x0A;- Original elements:&#x0A;     br.com.sos24horas.tcc.common.exception.JSONException.java&#x0A;     br.com.sos24horas.tcc.common.exception.BaseException.java" description="Copy compilation units" destination="=appMobileClient/src&lt;br.com.sos24horas.tcc.common.exception" element1="/src&lt;br.com.sos24horas.tcc.common.exception{JSONException.java" element2="/src&lt;br.com.sos24horas.tcc.common.exception{BaseException.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1359308963570" units="2" version="1.0"/>
+</session>
