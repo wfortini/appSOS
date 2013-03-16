@@ -1,4 +1,6 @@
-package br.com.sos24horas.tcc.controller;
+package br.com.sos24horas.appclient.controller;
+
+import java.util.Date;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -13,12 +15,13 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import br.com.sos24horas.appclient.R;
+import br.com.sos24horas.appclient.domain.Segurado;
+import br.com.sos24horas.appclient.domain.Solicitacao;
+import br.com.sos24horas.appclient.http.ServicoWeb;
 import br.com.sos24horas.appclient.service.localizacao.Localizacao;
 import br.com.sos24horas.appclient.service.localizacao.Ponto;
 import br.com.sos24horas.appclient.service.map.Mapa;
 import br.com.sos24horas.service.json.DataSerializer;
-import br.com.sos24horas.tcc.domain.solicitacao.Solicitacao;
-import br.com.sos24horas.tcc.http.ServicoWeb;
 
 
 public class MainActivity extends Activity implements LocationListener{
@@ -26,7 +29,7 @@ public class MainActivity extends Activity implements LocationListener{
 	private ProgressDialog dialog = null;
 	private Ponto novoPonto;
 	
-	String serveName = "http://192.168.0.101:8080/appAdminService/solicitacao";
+	String serveName = "http://192.168.0.102:8080/appAdminService/solicitacao";
 	
 	private static final String TAG = "GCMActivity ";	
     
@@ -70,7 +73,14 @@ public class MainActivity extends Activity implements LocationListener{
 		   Log.d(TAG, "Localização  " + ponto);
 			    
 		   solicitacao.setLatitude(ponto.getLatitudeE6());
-		   solicitacao.setLongitute(ponto.getLongitudeE6());		    
+		   solicitacao.setLongitute(ponto.getLongitudeE6());
+		   Segurado segurado = new Segurado();
+		   segurado.setCelular("99930913");
+		   segurado.setIdSegurado(1L);
+		   solicitacao.setSegurado(segurado);
+		   solicitacao.setIdDispositivo("99930913");
+		   solicitacao.setLocalDisponivel(true);
+		   solicitacao.setDataSolicitacao(new Date());
 			
 		  
 			

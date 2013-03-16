@@ -1,4 +1,4 @@
-package br.com.sos24horas.service.http.client;
+package br.com.sos24horas.appclient.service.http.client;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;

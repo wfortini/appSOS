@@ -1,6 +1,6 @@
-package br.com.sos24horas.tcc.http;
+package br.com.sos24horas.appclient.http;
 
-import br.com.sos24horas.service.http.client.WebService;
+import br.com.sos24horas.appclient.service.http.client.WebService;
 
 
 public class ServicoWeb implements Runnable{
