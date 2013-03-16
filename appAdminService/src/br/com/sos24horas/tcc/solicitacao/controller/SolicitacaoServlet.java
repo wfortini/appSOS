@@ -10,8 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.sos24horas.tcc.domain.solicitacao.Solicitacao;
-import br.com.sos24horas.tcc.json.DataSerializer;
+import br.com.sos24horas.service.json.DataSerializer;
+import br.com.sos24horas.tcc.common.domain.Solicitacao;
+import br.com.sos24horas.tcc.solicitacao.business.SolicitacaoRN;
 ;
 
 @WebServlet(value = "/solicitacao")
@@ -38,7 +39,8 @@ public class SolicitacaoServlet extends HttpServlet{
 				solicitacao = DataSerializer.getInstance().toObject(dadosSolitacao, Solicitacao.class);	
 			}
 			
-			System.out.println(">>>>>>>>>>>>>>>>>" + solicitacao.getRegistroGCM());
+			SolicitacaoRN solic = new SolicitacaoRN();
+			solic.incluirSolicitacao(solicitacao);
 			System.out.println(">>>>>>>>>>>>>>>>> " + solicitacao.getLatitude());
 			System.out.println(">>>>>>>>>>>>>>>>>" + solicitacao.getLongitute());
 			

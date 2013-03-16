@@ -12,23 +12,23 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-
 /**
  * 
  * @author wellington
  *
  */
-@Entity
-@Table(name="solicitacao")
-public class Solicitacao implements Serializable{
 
-	
+@Entity
+@Table(name="atendimento")
+public class Atendimento implements Serializable{
+
 	private static final long serialVersionUID = 1L;
 	
+
 	@Id
 	@GeneratedValue
-	@Column(name="id_solicitacao")
-	private Long idSolicitacao;
+	@Column(name="id_atendimento")
+	private Long idAtendimento;
 	
 	@Column(name="latitude")
 	private Integer latitude;
@@ -48,41 +48,43 @@ public class Solicitacao implements Serializable{
 	@JoinColumn(name="id_atendente")
 	private Atendente atendente;
 	
-	@Column(name="dat_hora_inicio_solic")
+	@Column(name="dat_hora_inicio")
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date dataSolicitacao;
+	private Date dataInicioAtendimento;
+	
+	@Column(name="dat_hora_fim")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date dataFimAtendimento;
 	
 	@Column(name="id_dispositivo")
 	private String idDispositivo;
 	
 	@Column(name="local_disponivel")
 	private Boolean localDisponivel;
-	
-	@Column(name="dat_hora_inic_atendimento")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date dataHoraInicioAtendimento;
-	
-	public Solicitacao() {
+
+	public Atendimento() {
 		// TODO Auto-generated constructor stub
 	}
-
 	
-	public Date getDataHoraInicioAtendimento() {
-		return dataHoraInicioAtendimento;
+	public Atendimento(Solicitacao solicitacao){
+		
+		this.latitude = solicitacao.getLatitude();
+		this.longitute = solicitacao.getLongitute();
+		this.atendente = solicitacao.getAtendente();
+		this.segurado = solicitacao.getSegurado();
+		this.localDisponivel = solicitacao.getLocalDisponivel();
+		this.dataInicioAtendimento = solicitacao.getDataHoraInicioAtendimento();
+		this.prestador = solicitacao.getPrestador();
+		this.idDispositivo = solicitacao.getIdDispositivo();
+		
 	}
 
-
-	public void setDataHoraInicioAtendimento(Date dataHoraInicioAtendimento) {
-		this.dataHoraInicioAtendimento = dataHoraInicioAtendimento;
+	public Long getIdAtendimento() {
+		return idAtendimento;
 	}
 
-
-	public Long getIdSolicitacao() {
-		return idSolicitacao;
-	}
-
-	public void setIdSolicitacao(Long idSolicitacao) {
-		this.idSolicitacao = idSolicitacao;
+	public void setIdAtendimento(Long idAtendimento) {
+		this.idAtendimento = idAtendimento;
 	}
 
 	public Integer getLatitude() {
@@ -125,12 +127,20 @@ public class Solicitacao implements Serializable{
 		this.atendente = atendente;
 	}
 
-	public Date getDataSolicitacao() {
-		return dataSolicitacao;
+	public Date getDataInicioAtendimento() {
+		return dataInicioAtendimento;
 	}
 
-	public void setDataSolicitacao(Date dataSolicitacao) {
-		this.dataSolicitacao = dataSolicitacao;
+	public void setDataInicioAtendimento(Date dataInicioAtendimento) {
+		this.dataInicioAtendimento = dataInicioAtendimento;
+	}
+
+	public Date getDataFimAtendimento() {
+		return dataFimAtendimento;
+	}
+
+	public void setDataFimAtendimento(Date dataFimAtendimento) {
+		this.dataFimAtendimento = dataFimAtendimento;
 	}
 
 	public String getIdDispositivo() {
@@ -154,7 +164,7 @@ public class Solicitacao implements Serializable{
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((idSolicitacao == null) ? 0 : idSolicitacao.hashCode());
+				+ ((idAtendimento == null) ? 0 : idAtendimento.hashCode());
 		return result;
 	}
 
@@ -166,20 +176,14 @@ public class Solicitacao implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Solicitacao other = (Solicitacao) obj;
-		if (idSolicitacao == null) {
-			if (other.idSolicitacao != null)
+		Atendimento other = (Atendimento) obj;
+		if (idAtendimento == null) {
+			if (other.idAtendimento != null)
 				return false;
-		} else if (!idSolicitacao.equals(other.idSolicitacao))
+		} else if (!idAtendimento.equals(other.idAtendimento))
 			return false;
 		return true;
 	}
 	
 	
-	 
-	
-	
-	
-	
-
 }

@@ -3,7 +3,6 @@
 	<name>appAdminService</name>
 	<comment></comment>
 	<projects>
-		<project>appDomain</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -7,7 +7,7 @@ import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion;
 
-import br.com.sos24horas.tcc.domain.common.exception.JSONException;
+import br.com.sos24horas.service.json.exception.JSONException;
 
 public class DataSerializer {
 	

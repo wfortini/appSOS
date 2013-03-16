@@ -59,7 +59,7 @@ public class Localizacao implements LocationListener{
 	 */
 	public  Ponto getUltimaLocalizacao() throws LocalizacaoIndisponivelException{
 		
-		Location local = this.locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER); //TODO: apos teste trocar por getProvider
+		Location local = this.locationManager.getLastKnownLocation(getProvider()); //TODO: apos teste trocar por getProvider
 		if(local != null){
 			return new Ponto(local);
 		}else{
@@ -75,7 +75,7 @@ public class Localizacao implements LocationListener{
 	
 	public void atualizarLocalizacao(){
 		
-		this.locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+		this.locationManager.requestLocationUpdates(getProvider(), 0, 0, this);
 		
 	}
 	
