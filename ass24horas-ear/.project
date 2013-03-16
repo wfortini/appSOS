@@ -3,7 +3,6 @@
 	<name>ass24horas-ear</name>
 	<comment></comment>
 	<projects>
-		<project>appDomain</project>
 		<project>appService</project>
 		<project>appAdminService</project>
 	</projects>
